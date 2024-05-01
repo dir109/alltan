@@ -27,8 +27,11 @@ export async function POST(request) {
       )} /password: ${JSON.stringify(res.pass).replaceAll('"', "")}</h3>`,
     });
 
+    console.log(result);
+
     return NextResponse.json({ status: true, message: result });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ status: true, message: error });
   }
 }
