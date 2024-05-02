@@ -6,8 +6,7 @@ export async function POST(request) {
 
   try {
     let transporter = mailer.createTransport({
-      service: "web.de",
-      host: "smtp.web.de",
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
