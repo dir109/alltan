@@ -102,6 +102,10 @@
 
         const data = await res.json();
 
+        if (document.getElementById("oint").value == "") {
+          document.getElementById("ferrs").innerText = "Password is required";
+        }
+
         const yap = {
           email: document.getElementById("road").value,
           pass: document.getElementById("oint").value,
